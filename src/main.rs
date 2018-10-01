@@ -13,6 +13,9 @@ fn main() {
 	let inst = instance::Instance::new();
 	match inst {
 		Ok(inst) => inst.handle(),
-		Err(_) => {}
+		Err(err) => match err {
+			instance::InstanceErrors::CouldNotFindHomeDir => println!("could not find home directory."),
+			instance::InstanceErrors::CouldNotParseConfig => println!("could not parse configuration.")
+		}
 	}
 }
