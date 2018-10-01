@@ -1,0 +1,7 @@
+{
+	"prefix": "<DIR> ",
+	"shell_character": ">",
+	"aliases": {
+		"ll": "ls -lh"
+	}
+}
